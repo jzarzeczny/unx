@@ -9,12 +9,16 @@ const StyledHamburger = styled.button`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 3;
 `;
 const Line = styled.div`
   width: 13px;
   height: 3px;
   background-color: #fff;
   position: relative;
+  /* opacity: ${({ open }) => (open ? "0" : "1")}; */
+  background-color: ${({ open }) => (open ? "transparent" : "#fff")};
+  transition: all 0.5s ease-in-out;
 
   &:before,
   &:after {
@@ -24,19 +28,24 @@ const Line = styled.div`
     background-color: #fff;
     position: absolute;
     right: 0;
+    transition: all 0.5s ease-in-out;
   }
   &:before {
-    top: 9px;
+    top: ${({ open }) => (open ? "0" : "9px")};
+
+    transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
   }
   &:after {
-    bottom: 9px;
+    bottom: ${({ open }) => (open ? "0" : "9px")};
+
+    transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
   }
 `;
 
-export default function Hamburger() {
+export default function Hamburger({ toggleNavbar, open }) {
   return (
-    <StyledHamburger>
-      <Line />
+    <StyledHamburger onClick={toggleNavbar}>
+      <Line open={open} />
     </StyledHamburger>
   );
 }

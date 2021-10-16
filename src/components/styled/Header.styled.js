@@ -5,6 +5,8 @@ export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  /* overflow-x: hidden; */
 `;
 
 export const Logo = styled.h1`
