@@ -11,15 +11,27 @@ const StyledNavbar = styled.nav`
   z-index: 1;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   transition: transform 0.5s ease-in-out;
+  @media (min-width: 1024px) {
+    transform: none;
+    position: relative;
+    height: 100%;
+    background-color: transparent;
+  }
 `;
 const StyledList = styled.ul`
   height: 100%;
   padding: 0;
+  width: auto;
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  @media (min-width: 1024px) {
+    background-color: transparent;
+    flex-direction: row;
+    width: 600px;
+  }
 `;
 
 const StyledListElement = styled.li`
@@ -32,6 +44,10 @@ const StyledLink = styled.a`
   &:hover {
     text-decoration: underline;
     text-decoration-color: #fff;
+  }
+  @media (min-width: 1024px) {
+    font-size: 18px;
+    font-weight: 500;
   }
 `;
 

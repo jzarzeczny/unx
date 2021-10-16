@@ -10,6 +10,9 @@ const StyledHamburger = styled.button`
   justify-content: space-evenly;
   align-items: center;
   z-index: 3;
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;
 const Line = styled.div`
   width: 13px;
