@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledHamburger = styled.button`
+  cursor: pointer;
   width: 30px;
   height: 30px;
   border: none;

@@ -11,3 +11,7 @@ export const Logo = styled.h1`
   font-size: 32px;
   font-weight: 700;
 `;
+
+export const DashboardButton = styled.button`
+  display: none;
+`;

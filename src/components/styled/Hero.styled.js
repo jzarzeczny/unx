@@ -3,6 +3,19 @@ import styled from "styled-components";
 export const HeroSection = styled.section`
   position: relative;
   padding: 2rem;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #3747d7;
+    border-radius: 50%;
+    filter: blur(624px);
+    bottom: 0;
+    left: -100px;
+    opacity: 0.2;
+  }
 `;
 export const HeroTitle = styled.h2`
   font-size: 40px;
