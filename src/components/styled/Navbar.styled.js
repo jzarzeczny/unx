@@ -30,7 +30,8 @@ const StyledList = styled.ul`
   @media (min-width: 1024px) {
     background-color: transparent;
     flex-direction: row;
-    width: 600px;
+    max-width: 600px;
+    margin: 0 auto;
   }
 `;
 

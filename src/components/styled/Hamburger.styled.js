@@ -7,7 +7,7 @@ const StyledHamburger = styled.button`
   border: none;
   background-color: transparent;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   z-index: 3;
   @media (min-width: 1024px) {
