@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 export const HeroSection = styled.section`
   position: relative;
@@ -30,7 +30,7 @@ export const HeroSection = styled.section`
       left: 20vw;
       opacity: 0.3;
       z-index: -2;
-      animation: size-of-bulb 5s infinite;
+      animation: size-of-bulb 8s infinite;
     }
   }
   @keyframes size-of-bulb {
